@@ -14,7 +14,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1vw 1.25vw;
+  padding: 2vw 1.25vw;
   padding-top: 0;
   box-shadow: rgb(0 0 0 / 10%) 0px 0px 5px 0px, rgb(0 0 0 / 10%) 0px 0px 1px 0px;
 }
@@ -42,14 +42,20 @@ button {
   cursor: pointer;
 }
 
+.round-button {
+  border: 0.1vw solid #232323;
+  border-radius: 1.35vw;
+  padding: 0.55vw 1.35vw;
+  letter-spacing: 0.05vw;
+}
+
 input[type=text] {
   font-size: 1vw;
   color: #232323;
   letter-spacing: 0.1vw;
-  padding: 0 0.35vw;
-  padding-bottom: 0.25vw;
+  padding: 0.55vw 1.35vw;
   border: none;
-  border-bottom: 0.15vw solid #232323;
+  border-bottom: 0.1vw solid #232323;
   transition: all 0.35s ease-in-out;
 }
 

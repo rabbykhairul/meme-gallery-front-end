@@ -7,9 +7,9 @@ const MemeUploader = () => {
     <div className="meme-uploader-container">
       <div className="meme-link-upload">
         <TextInput className="link-input" placeholder="Paste a link here.." />
-        <Button>Add meme</Button>
+        <Button className="round-button" >Add meme</Button>
       </div>
-      <Button>Upload</Button>
+      <Button className="round-button" >Upload</Button>
     </div>
   );
 };
