@@ -3,7 +3,7 @@ import React, { createRef, useEffect } from "react";
 let timer = null;
 
 const NotificationCard = (props) => {
-  const { message = "", type = "loading" } = props;
+  const { message = "", type = "loading", onClose = () => {} } = props;
 
   const cardRef = createRef();
 
@@ -19,7 +19,10 @@ const NotificationCard = (props) => {
     // eslint-disable-next-line
   }, [props.type]);
 
-  const hideNotification = () => cardRef.current.classList.remove("display-notification");
+  const hideNotification = () => {
+    cardRef.current.classList.remove("display-notification");
+    setTimeout(() => onClose(), 850);
+  };
 
   return (
     <div className="notification-card" ref={cardRef} onClick={hideNotification}>
