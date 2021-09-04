@@ -10,6 +10,10 @@
 
 nav {
   width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 1vw 1.25vw;
   padding-top: 0;
   box-shadow: rgb(0 0 0 / 10%) 0px 0px 5px 0px, rgb(0 0 0 / 10%) 0px 0px 1px 0px;
@@ -18,5 +22,22 @@ nav {
 header {
   font-family: 'Bungee Shade', cursive;
   text-align: center;
-  font-size: 3.5vw;
+  font-size: 3vw;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.15vw solid #232323;
+  color: #232323;
+  padding: 0 0.35vw;
+  padding-bottom: 0.25vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1vw;
+  letter-spacing: 0.1vw;
+  outline: none;
+  margin-top: -0.35vw;
+  cursor: pointer;
 }
