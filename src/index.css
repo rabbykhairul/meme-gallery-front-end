@@ -41,3 +41,18 @@ button {
   margin-top: -0.35vw;
   cursor: pointer;
 }
+
+input[type=text] {
+  font-size: 1vw;
+  color: #232323;
+  letter-spacing: 0.1vw;
+  padding: 0 0.35vw;
+  padding-bottom: 0.25vw;
+  border: none;
+  border-bottom: 0.15vw solid #232323;
+  transition: all 0.35s ease-in-out;
+}
+
+input[type=text]:focus {
+  outline: none;
+}
