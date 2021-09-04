@@ -41,6 +41,13 @@ const MemeUploader = () => {
   const handleMemeUpload = async () => {
     if (verifyMemeUploadInputData()) {
       setShouldDisplayNotification(true);
+
+      const result = await uploadMeme(memeLink, memeFile);
+      if (result?.success) {
+        setNotificationInfo(UPLOAD_NOTIFICATION_INFO.success);
+        resetMemeInputs();
+        setTimeout(() => resetNotification(), 8500);
+      }
     }
   };
 
