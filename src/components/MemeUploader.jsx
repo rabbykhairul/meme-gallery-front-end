@@ -42,6 +42,7 @@ const MemeUploader = () => {
 
   const handleMemeUpload = () => {
     if (verifyMemeUploadInputData()) {
+      setShouldDisplayNotification(true);
       uploadMeme(memeLink, memeFile);
     }
   };
