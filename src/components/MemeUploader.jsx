@@ -74,7 +74,8 @@ const MemeUploader = () => {
         shouldDisplayNotification && 
         <NotificationCard
           type={notificationInfo.type}
-          message={notificationInfo.message} 
+          message={notificationInfo.message}
+          onClose={() => setShouldDisplayNotification(false)}
         />
       }
     </div>
