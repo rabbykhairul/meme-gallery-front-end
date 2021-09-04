@@ -1,8 +1,9 @@
 import './App.css';
+import TopNavBar from "./components/TopNavBar";
 
 function App() {
   return (
-    <h1>Hello there...</h1>
+    <TopNavBar />
   );
 }
 
