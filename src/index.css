@@ -88,3 +88,37 @@ input[type=text]:focus {
   width: 70%;
   margin-right: 5%;
 }
+
+.notification-card {
+  position: fixed;
+  width: fit-content;
+  max-width: 25vw;
+  height: fit-content;
+  padding: 1.15vw 1.25vw;
+  top: 100vh;
+  left: 5vw;
+  transition: all 1.5s ease-in-out;
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+  display: flex;
+  align-items: center;
+  font-size: 0.9vw;
+  letter-spacing: 0.25vw;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.display-notification {
+  top: 80vh;
+}
+
+.notification-loading {
+  border-left: 0.25vw solid deepskyblue;
+}
+
+.notification-success {
+  border-left: 0.25vw solid green;
+}
+
+.notification-error {
+  border-left: 0.25vw solid red;
+}
