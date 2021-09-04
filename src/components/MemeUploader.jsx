@@ -22,6 +22,8 @@ const UPLOAD_NOTIFICATION_INFO = {
   }
 };
 
+let timer = null;
+
 const MemeUploader = () => {
   const [ memeLink, setMemeLink ] = useState("");
   const [ memeFile, setMemeFile ] = useState(null);
@@ -41,14 +43,17 @@ const MemeUploader = () => {
   const handleMemeUpload = async () => {
     if (verifyMemeUploadInputData()) {
       setShouldDisplayNotification(true);
+      setNotificationInfo(UPLOAD_NOTIFICATION_INFO.inProgress);
 
       const result = await uploadMeme(memeLink, memeFile);
       if (result?.success) {
         setNotificationInfo(UPLOAD_NOTIFICATION_INFO.success);
         resetMemeInputs();
       } else setNotificationInfo(UPLOAD_NOTIFICATION_INFO.error);
-      
-      setTimeout(() => resetNotification(), 8500);
+
+      setShouldDisplayNotification(true);
+      clearTimeout(timer);
+      timer = setTimeout(() => resetNotification(), 8500);
     }
   };
 
@@ -64,6 +69,7 @@ const MemeUploader = () => {
   const resetNotification = () => {
     setShouldDisplayNotification(false);
     setNotificationInfo(UPLOAD_NOTIFICATION_INFO.inProgress);
+    clearTimeout(timer);
   };
 
   // eslint-disable-next-line
