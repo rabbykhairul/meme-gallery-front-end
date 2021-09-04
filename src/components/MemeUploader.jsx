@@ -58,6 +58,9 @@ const MemeUploader = () => {
     setNotificationInfo(UPLOAD_NOTIFICATION_INFO.inProgress);
   };
 
+  // eslint-disable-next-line
+  useEffect(() => handleMemeUpload(), [memeFile]);
+
   return (
     <div className="meme-uploader-container">
       <div className="meme-link-upload">
