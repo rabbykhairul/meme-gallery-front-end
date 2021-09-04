@@ -56,3 +56,21 @@ input[type=text] {
 input[type=text]:focus {
   outline: none;
 }
+
+.meme-uploader-container {
+  width: 100%;
+  padding: 0 8.5vw;
+  padding-left: 15vw;
+  margin-top: 1.5vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.meme-link-upload {
+  width: 70%;
+}
+
+.link-input {
+  width: 70%;
+  margin-right: 5%;
+}
