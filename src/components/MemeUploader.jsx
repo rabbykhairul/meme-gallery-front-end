@@ -5,10 +5,16 @@ import TextInput from "./commons/TextInput";
 
 const MemeUploader = () => {
   const [ memeLink, setMemeLink ] = useState("");
+  const [ memeFile, setMemeFile ] = useState(null);
 
   const handleMemeLinkInput = (e) => {
     console.log("link: ", e.target.value);
     setMemeLink(e.target.value);
+  };
+
+  const handleMemeFileSelection = (e) => {
+    setMemeFile(e.target?.files?.[0]);
+    console.log("file: ", e.target?.files?.[0]);
   };
 
   return (
@@ -23,7 +29,12 @@ const MemeUploader = () => {
         <Button className="round-button" >Add meme</Button>
       </div>
 
-      <FileInput id="upload-meme" displayTitle="Upload" accept="image/*" />
+      <FileInput 
+        id="upload-meme" 
+        displayTitle="Upload" 
+        accept="image/*"
+        onChange={handleMemeFileSelection} 
+      />
     </div>
   );
 };
