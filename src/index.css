@@ -47,6 +47,13 @@ button {
   border-radius: 1.35vw;
   padding: 0.55vw 1.35vw;
   letter-spacing: 0.05vw;
+  transition: all 0.35s ease-out;
+}
+
+.round-button:hover,
+.round-button:focus {
+  color: white;
+  background-color: #232323;
 }
 
 input[type=text] {
