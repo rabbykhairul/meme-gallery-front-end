@@ -3,6 +3,7 @@ import Button from "./commons/Button";
 import FileInput from "./commons/FileInput";
 import NotificationCard from "./commons/NotificationCard";
 import TextInput from "./commons/TextInput";
+import { uploadMeme } from "./../services/memeService";
 
 const UPLOAD_NOTIFICATION_INFO = {
   inProgress: {
@@ -35,8 +36,19 @@ const MemeUploader = () => {
 
   const handleMemeFileSelection = (e) => {
     setMemeFile(e.target?.files?.[0]);
-    console.log("file: ", e.target?.files?.[0]);
+    
+    if (e.target?.files?.[0]) handleMemeUpload();
   };
+
+  const handleMemeUpload = () => {
+    if (verifyMemeUploadInputData()) {
+      uploadMeme(memeLink, memeFile);
+    }
+  };
+
+  const verifyMemeUploadInputData = () => {
+    return memeFile || memeLink;
+  }
 
   return (
     <div className="meme-uploader-container">
@@ -47,7 +59,7 @@ const MemeUploader = () => {
           value={memeLink}
           onChange={handleMemeLinkInput} 
         />
-        <Button className="round-button" >Add meme</Button>
+        <Button className="round-button" onClick={handleMemeUpload} >Add meme</Button>
       </div>
 
       <FileInput 
