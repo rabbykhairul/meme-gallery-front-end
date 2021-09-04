@@ -26,5 +26,15 @@ export const getMemes = async () => {
   }
 };
 
-const memeService = { uploadMeme, getMemes };
+export const getMemeById = async (memeId) => {
+  try {
+    console.log("url: ", `${MEME_API_URL}/${memeId}`);
+    const { data } = await axios.get(`${MEME_API_URL}/${memeId}`);
+    return data;
+  } catch (err) {
+    return { success: false };
+  }
+};
+
+const memeService = { uploadMeme, getMemes, getMemeById };
 export default memeService;
