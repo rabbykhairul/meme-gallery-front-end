@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "./commons/Button";
+import FileInput from "./commons/FileInput";
 import TextInput from "./commons/TextInput";
 
 const MemeUploader = () => {
@@ -9,7 +10,8 @@ const MemeUploader = () => {
         <TextInput className="link-input" placeholder="Paste a link here.." />
         <Button className="round-button" >Add meme</Button>
       </div>
-      <Button className="round-button" >Upload</Button>
+
+      <FileInput id="upload-meme" displayTitle="Upload" accept="image/*" />
     </div>
   );
 };
