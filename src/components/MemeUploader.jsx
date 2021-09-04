@@ -53,6 +53,11 @@ const MemeUploader = () => {
     setMemeLink("");
   };
 
+  const resetNotification = () => {
+    setShouldDisplayNotification(false);
+    setNotificationInfo(UPLOAD_NOTIFICATION_INFO.inProgress);
+  };
+
   return (
     <div className="meme-uploader-container">
       <div className="meme-link-upload">
