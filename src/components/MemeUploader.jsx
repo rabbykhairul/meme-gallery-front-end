@@ -47,7 +47,7 @@ const MemeUploader = () => {
         setNotificationInfo(UPLOAD_NOTIFICATION_INFO.success);
         resetMemeInputs();
         setTimeout(() => resetNotification(), 8500);
-      }
+      } else setNotificationInfo(UPLOAD_NOTIFICATION_INFO.error);
     }
   };
 
