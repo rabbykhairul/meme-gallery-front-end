@@ -36,20 +36,22 @@ const MemeUploader = () => {
 
   const handleMemeFileSelection = (e) => {
     setMemeFile(e.target?.files?.[0]);
-    
-    if (e.target?.files?.[0]) handleMemeUpload();
   };
 
-  const handleMemeUpload = () => {
+  const handleMemeUpload = async () => {
     if (verifyMemeUploadInputData()) {
       setShouldDisplayNotification(true);
-      uploadMeme(memeLink, memeFile);
     }
   };
 
   const verifyMemeUploadInputData = () => {
     return memeFile || memeLink;
-  }
+  };
+
+  const resetMemeInputs = () => {
+    setMemeFile(null);
+    setMemeLink("");
+  };
 
   return (
     <div className="meme-uploader-container">
