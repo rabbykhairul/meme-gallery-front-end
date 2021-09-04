@@ -20,7 +20,7 @@ const NotificationCard = (props) => {
   }, [props.type]);
 
   const hideNotification = () => {
-    cardRef.current.classList.remove("display-notification");
+    cardRef?.current?.classList.remove("display-notification");
     setTimeout(() => onClose(), 850);
   };
 
