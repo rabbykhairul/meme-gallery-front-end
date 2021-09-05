@@ -4,6 +4,7 @@ import './App.css';
 import MemeGallerySkeleton from './components/commons/MemeGallerySkeleton';
 import Footer from './components/Footer';
 import MemeGallery from './components/MemeGallery';
+import Statistics from './components/Statistics';
 import TopNavBar from "./components/TopNavBar";
 import { deleteMemeById, getMemes } from './services/memeService';
 
@@ -36,7 +37,7 @@ function App() {
 
       <Switch>
         <Route path="/stats" >
-          <h1>See the stats...</h1>
+          <Statistics />
         </Route>
 
         <Route path="/">
@@ -46,16 +47,7 @@ function App() {
           </>
         </Route>
       </Switch>
-      
-      <Footer />
-    </>
-  );
 
-  return (
-    <>
-      <TopNavBar onUploadSuccess={addUploadedMeme} />
-      { isMemeIdsLoading && <MemeGallerySkeleton /> }
-      { !isMemeIdsLoading && <MemeGallery memeIds={memeIds} onDelete={handleMemeDelete} /> }
       <Footer />
     </>
   );
