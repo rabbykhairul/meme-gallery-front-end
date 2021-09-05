@@ -239,6 +239,12 @@ img {
   max-height: 100%;
 }
 
+.stats-container {
+  width: auto;
+  height: 60vh;
+  padding: 5vw 20vw;
+}
+
 @media only screen and (max-width: 600px) {
   nav {
     padding: 6vw 1.25vw;
