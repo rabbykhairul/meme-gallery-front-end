@@ -20,6 +20,12 @@ a:hover {
   text-decoration: underline;
 }
 
+#root {
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+}
+
 nav {
   width: auto;
   display: flex;
