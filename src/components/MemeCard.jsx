@@ -8,6 +8,7 @@ const MemeCard = (props) => {
   const [ showLoadingSkeleton, setShowLoadingSkeleton ] = useState(true);
   const [ meme, setMeme ] = useState({});
 
+  // eslint-disable-next-line
   useEffect(() => loadMeme(), []);
 
   const loadMeme = async () => {
@@ -25,7 +26,7 @@ const MemeCard = (props) => {
     return (
       <>
         <div className="meme-image">
-          <img src={meme.url || meme.base64Image} />
+          <img src={meme.url || meme.base64Image} alt="" />
         </div>
         <div className="meme-action">
           <Button onClick={() => onDelete(memeId)} >Delete</Button>
