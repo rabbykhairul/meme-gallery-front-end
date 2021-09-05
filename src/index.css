@@ -175,7 +175,7 @@ input[type=text]:focus {
 .meme-card {
   min-width: 29%;
   width: -moz-fit-content;
-  max-width: 40vw;
+  max-width: 48%;
   min-height: 25vw;
   max-height: 25vw;
   margin-bottom: 3.25vw;
