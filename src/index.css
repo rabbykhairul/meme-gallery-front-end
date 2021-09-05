@@ -313,6 +313,10 @@ img {
     bottom: 55vh;
   }
 
+  .stats-container {
+    padding: 8vw 0vw;
+  }
+
   footer {
     font-size: 3.25vw;
     padding-bottom: 12vw;
