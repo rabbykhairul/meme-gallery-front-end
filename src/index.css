@@ -254,7 +254,6 @@ img {
 @media only screen and (max-width: 600px) {
   nav {
     padding: 6vw 1.25vw;
-    padding-top: 0;
   }
 
   header { font-size: 8vw; }
