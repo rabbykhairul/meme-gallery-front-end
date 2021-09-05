@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import MemeGallerySkeleton from './components/commons/MemeGallerySkeleton';
+import Footer from './components/Footer';
 import MemeGallery from './components/MemeGallery';
 import TopNavBar from "./components/TopNavBar";
 import { deleteMemeById, getMemes } from './services/memeService';
@@ -33,6 +34,7 @@ function App() {
       <TopNavBar onUploadSuccess={addUploadedMeme} />
       { isMemeIdsLoading && <MemeGallerySkeleton /> }
       { !isMemeIdsLoading && <MemeGallery memeIds={memeIds} onDelete={handleMemeDelete} /> }
+      <Footer />
     </>
   );
 }
