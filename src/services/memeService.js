@@ -21,6 +21,7 @@ export const getMemes = async () => {
     console.log("\n---");
     console.log('data: ', data);
     console.log("---\n");
+    return data;
   } catch (err) {
     return { success: false };
   }
