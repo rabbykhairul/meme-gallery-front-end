@@ -17,11 +17,16 @@ function App() {
     setIsMemeIdsLoading(false);
   };
 
+  const handleMemeDelete = async(memeId) => {
+    const remainingMemeIds = memeIds.filter( id => id !== memeId );
+    setMemeIds(remainingMemeIds);
+  }
+
   return (
     <>
       <TopNavBar />
       { isMemeIdsLoading && <MemeGallerySkeleton /> }
-      { !isMemeIdsLoading && <MemeGallery memeIds={memeIds} /> }
+      { !isMemeIdsLoading && <MemeGallery memeIds={memeIds} onDelete={handleMemeDelete} /> }
     </>
   );
 }
