@@ -3,7 +3,7 @@ import './App.css';
 import MemeGallerySkeleton from './components/commons/MemeGallerySkeleton';
 import MemeGallery from './components/MemeGallery';
 import TopNavBar from "./components/TopNavBar";
-import { getMemes } from './services/memeService';
+import { deleteMemeById, getMemes } from './services/memeService';
 
 function App() {
   const [ memeIds, setMemeIds ] = useState([]);
@@ -20,6 +20,7 @@ function App() {
   const handleMemeDelete = async(memeId) => {
     const remainingMemeIds = memeIds.filter( id => id !== memeId );
     setMemeIds(remainingMemeIds);
+    deleteMemeById(memeId);
   }
 
   return (
