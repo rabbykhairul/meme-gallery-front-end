@@ -37,5 +37,15 @@ export const getMemeById = async (memeId) => {
   }
 };
 
-const memeService = { uploadMeme, getMemes, getMemeById };
+export const deleteMemeById = async (memeId) => {
+  try {
+    console.log("url: ", `${MEME_API_URL}/${memeId}`);
+    const { data } = await axios.delete(`${MEME_API_URL}/${memeId}`);
+    return data;
+  } catch (err) {
+    return { success: false };
+  }
+}
+
+const memeService = { uploadMeme, getMemes, getMemeById, deleteMemeById };
 export default memeService;
