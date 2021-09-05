@@ -94,8 +94,10 @@ input[type=text]:focus {
   width: fit-content;
   max-width: 25vw;
   height: fit-content;
+  background-color: white;
+  z-index: 1;
   padding: 1.15vw 1.25vw;
-  top: 100vh;
+  bottom: 100vh;
   left: 5vw;
   transition: all .65s cubic-bezier(0.65, 0, 0.35, 1);
   box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
@@ -108,7 +110,7 @@ input[type=text]:focus {
 }
 
 .display-notification {
-  top: 80vh;
+  bottom: 88vh;
 }
 
 .notification-loading {
