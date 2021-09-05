@@ -218,3 +218,72 @@ input[type=text]:focus {
 img {
   max-height: 100%;
 }
+
+@media only screen and (max-width: 600px) {
+  nav {
+    padding: 6vw 1.25vw;
+    padding-top: 0;
+  }
+
+  header { font-size: 8vw; }
+
+  button, .file-upload { font-size: 3.75vw; }
+
+  .meme-uploader-container { 
+    flex-direction: column;
+    align-items: center;
+    padding: 0 6.5vw; 
+    margin-top: 5.5vw;
+  }
+
+  .meme-link-upload { 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  input[type=text] {
+    font-size: 3.75vw;
+  }
+
+  .link-input {
+    width: 70%;
+    margin: 0;
+  }
+
+  .round-button {
+    padding: 1.55vw 2.35vw;
+  }
+
+  .file-upload {
+    text-align: center;
+    margin-top: 5vw;
+  }
+
+  .meme-gallery {
+    padding: 6vw 4.25vw;
+  }
+
+  .meme-card {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 40vh;
+    max-height: 50vh;
+    margin-bottom: 6vw;
+  }
+
+  .meme-delete {
+    padding: 2vw 5vw;
+    font-weight: 400;
+  }
+
+  .notification-card {
+    max-width: 65vw;
+    font-size: 4vw;
+    padding: 3vw 5.5vw;
+  }
+  
+  .display-notification {
+    bottom: 55vh;
+  }
+}
