@@ -29,7 +29,7 @@ const MemeCard = (props) => {
           <img src={meme.url || meme.base64Image} alt="" />
         </div>
         <div className="meme-action">
-          <Button onClick={() => onDelete(memeId)} >Delete</Button>
+          <Button className="meme-delete" onClick={() => onDelete(memeId)} >Delete</Button>
         </div>
       </>
     );
