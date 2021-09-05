@@ -25,6 +25,14 @@ header {
   font-size: 3vw;
 }
 
+footer {
+  padding: 0 5vw;
+  padding-bottom: 6vw;
+  text-align: center;
+  font-size: 1vw;
+  letter-spacing: 0.15vw;
+}
+
 button,
 .file-upload {
   background-color: transparent;
@@ -285,5 +293,10 @@ img {
   
   .display-notification {
     bottom: 55vh;
+  }
+
+  footer {
+    font-size: 3.25vw;
+    padding-bottom: 12vw;
   }
 }
