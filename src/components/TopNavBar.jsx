@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "./commons/Button";
 import MemeUploader from "./MemeUploader";
 
@@ -7,8 +8,12 @@ const TopNavBar = (props) => {
 
   return(
     <nav>
-      <header>Meme Gallery</header>
-      <Button>See Stats</Button>
+      <Link to="/">
+        <header>Meme Gallery</header>
+      </Link>
+      <Link to="stats">
+        <Button>See Stats</Button>
+      </Link>
       <MemeUploader onUploadSuccess={onUploadSuccess} />
     </nav>
   )

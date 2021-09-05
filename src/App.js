@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import MemeGallerySkeleton from './components/commons/MemeGallerySkeleton';
 import Footer from './components/Footer';
@@ -28,6 +29,27 @@ function App() {
     const newMemeIds = [ meme._id, ...memeIds ];
     setMemeIds(newMemeIds);
   }
+
+  return (
+    <>
+      <TopNavBar onUploadSuccess={addUploadedMeme} />
+
+      <Switch>
+        <Route path="/stats" >
+          <h1>See the stats...</h1>
+        </Route>
+
+        <Route path="/">
+          <>
+            { isMemeIdsLoading && <MemeGallerySkeleton /> }
+            { !isMemeIdsLoading && <MemeGallery memeIds={memeIds} onDelete={handleMemeDelete} /> }
+          </>
+        </Route>
+      </Switch>
+      
+      <Footer />
+    </>
+  );
 
   return (
     <>

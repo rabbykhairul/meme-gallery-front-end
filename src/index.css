@@ -8,6 +8,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+a:link,
+a:visited,
+a:active {
+  color: #232323;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
 nav {
   width: auto;
   display: flex;
