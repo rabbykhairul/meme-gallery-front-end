@@ -24,7 +24,9 @@ const UPLOAD_NOTIFICATION_INFO = {
 
 let timer = null;
 
-const MemeUploader = () => {
+const MemeUploader = (props) => {
+  const { onUploadSuccess } = props;
+
   const [ memeLink, setMemeLink ] = useState("");
   const [ memeFile, setMemeFile ] = useState(null);
 
@@ -49,6 +51,7 @@ const MemeUploader = () => {
       if (result?.success) {
         setNotificationInfo(UPLOAD_NOTIFICATION_INFO.success);
         resetMemeInputs();
+        onUploadSuccess(result.meme);
       } else setNotificationInfo(UPLOAD_NOTIFICATION_INFO.error);
 
       setShouldDisplayNotification(true);

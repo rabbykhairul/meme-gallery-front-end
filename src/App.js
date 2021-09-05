@@ -21,11 +21,16 @@ function App() {
     const remainingMemeIds = memeIds.filter( id => id !== memeId );
     setMemeIds(remainingMemeIds);
     deleteMemeById(memeId);
+  };
+
+  const addUploadedMeme = (meme) => {
+    const newMemeIds = [ meme._id, ...memeIds ];
+    setMemeIds(newMemeIds);
   }
 
   return (
     <>
-      <TopNavBar />
+      <TopNavBar onUploadSuccess={addUploadedMeme} />
       { isMemeIdsLoading && <MemeGallerySkeleton /> }
       { !isMemeIdsLoading && <MemeGallery memeIds={memeIds} onDelete={handleMemeDelete} /> }
     </>

@@ -2,12 +2,14 @@ import React from "react";
 import Button from "./commons/Button";
 import MemeUploader from "./MemeUploader";
 
-const TopNavBar = () => {
+const TopNavBar = (props) => {
+  const { onUploadSuccess } = props;
+
   return(
     <nav>
       <header>Meme Gallery</header>
       <Button>See Stats</Button>
-      <MemeUploader />
+      <MemeUploader onUploadSuccess={onUploadSuccess} />
     </nav>
   )
 };
